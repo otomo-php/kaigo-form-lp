@@ -52,7 +52,6 @@ h1 {
   margin-bottom: 16px;
 }
 
-label {
 input[type="text"],
 input[type="email"],
 select,
@@ -62,6 +61,10 @@ button {
   box-sizing: border-box;
   margin-bottom: 12px;
 }
+label {
+  margin-bottom: 12px;
+}
+
 }
 
 label input[type="checkbox"] {
