@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>かんたん転職アンケート</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <div class="card">
+      <div class="progress">
+        <div id="progressBar" class="progress-bar"></div>
+      </div>
+      <p id="stepLabel" class="step-label">STEP 1 / 6</p>
+
+      <form id="surveyForm">
+        <section class="step active" data-step="1">
+          <h1>お持ちの資格を選んでください</h1>
+          <label><input type="checkbox" name="qualification" value="介護福祉士"> 介護福祉士</label>
+          <label><input type="checkbox" name="qualification" value="実務者研修"> 実務者研修</label>
+          <label><input type="checkbox" name="qualification" value="初任者研修"> 初任者研修</label>
+          <label><input type="checkbox" name="qualification" value="ケアマネージャー"> ケアマネージャー</label>
+          <label><input type="checkbox" name="qualification" value="資格なし"> 資格なし</label>
+          <p class="error"></p>
+        </section>
+
+        <section class="step" data-step="2">
+          <h1>希望の働き方を選んでください</h1>
+          <label><input type="checkbox" name="work_style" value="常勤（夜勤あり）"> 常勤（夜勤あり）</label>
+          <label><input type="checkbox" name="work_style" value="常勤（夜勤なし）"> 常勤（夜勤なし）</label>
+          <label><input type="checkbox" name="work_style" value="非常勤（扶養内）"> 非常勤（扶養内）</label>
+          <label><input type="checkbox" name="work_style" value="非常勤（扶養外）"> 非常勤（扶養外）</label>
+          <p class="error"></p>
+        </section>
+
+        <section class="step" data-step="3">
+          <h1>転職希望時期を選んでください</h1>
+          <label><input type="radio" name="timing" value="1ヶ月以内"> 1ヶ月以内</label>
+          <label><input type="radio" name="timing" value="3ヶ月以内"> 3ヶ月以内</label>
+          <label><input type="radio" name="timing" value="6ヶ月以内"> 6ヶ月以内</label>
+          <label><input type="radio" name="timing" value="良いところがあれば"> 良いところがあれば</label>
+          <label><input type="radio" name="timing" value="未定"> 未定</label>
+          <p class="error"></p>
+        </section>
+
+        <section class="step" data-step="4">
+          <h1>お住まいの地域を教えてください</h1>
+          <input type="text" name="postal_code" placeholder="郵便番号（7桁）" />
+          <select name="prefecture">
+            <option value="">都道府県を選択</option>
+            <option>東京都</option>
+            <option>埼玉県</option>
+            <option>千葉県</option>
+            <option>神奈川県</option>
+          </select>
+          <p class="error"></p>
+        </section>
+
+        <section class="step" data-step="5">
+          <h1>お名前と生まれ年を入力してください</h1>
+          <input type="text" name="full_name" placeholder="氏名" />
+          <input type="text" name="birth_year" placeholder="生まれ年（例: 1990）" />
+          <p class="error"></p>
+        </section>
+
+        <section class="step" data-step="6">
+          <h1>ご連絡先を入力してください</h1>
+          <input type="text" name="phone" placeholder="電話番号" />
+          <input type="email" name="email" placeholder="メールアドレス" />
+          <label><input type="checkbox" name="offer_opt_in"> おすすめ求人の案内を受け取る</label>
+          <label><input type="checkbox" name="terms_agreed"> 利用規約・個人情報取扱いに同意する</label>
+          <p class="error"></p>
+        </section>
+
+        <div class="buttons">
+          <button type="button" id="prevBtn">戻る</button>
+          <button type="button" id="nextBtn">次へ</button>
+          <button type="submit" id="submitBtn" class="hidden">送信する</button>
+        </div>
+      </form>
+
+      <section id="thanks" class="hidden">
+        <h2>送信ありがとうございました</h2>
+        <p>担当よりご連絡いたします。</p>
+      </section>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
