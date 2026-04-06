@@ -1,4 +1,4 @@
-const GAS_URL = "YOUR_GAS_WEBAPP_URL";
+const GAS_URL = "https://script.google.com/macros/s/AKfycbyvQ9QXF57GRTWbjrR209L6XKxzH1I4mIzqaSGCML6mXKXdlxGo3ilsbzqbxHO-Jxpt8w/exec";
 
 const steps = [...document.querySelectorAll(".step")];
 const form = document.getElementById("surveyForm");
