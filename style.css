@@ -53,10 +53,15 @@ h1 {
 }
 
 label {
-  display: flex;
-  align-items: center;   /* ← これが効く */
-  gap: 8px;
+input[type="text"],
+input[type="email"],
+select,
+button {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
   margin-bottom: 12px;
+}
 }
 
 label input[type="checkbox"] {
